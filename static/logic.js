@@ -1,7 +1,7 @@
-Moralis.initialize("C3MYxDKNhePwcasQviJucKmLqtluL7LVkYFMidP5"); // Application id from moralis.io
-Moralis.serverURL = "https://dcywp9mvfo8r.grandmoralis.com:2053/server"; //Server url from moralis.io
+Moralis.initialize(""); // Application id from moralis.io
+Moralis.serverURL = ""; //Server url from moralis.io
 
-const nft_market_place_address = "0x447037bC9FdB85092229A1D6d9A4916CdE9e2885" //NFT Market Place Contract, code of this contract is in the following github repository.
+const nft_market_place_address = "" //NFT Market Place Contract, code of this contract is in the following github repository https://github.com/DanielMoralisSamples/25_NFT_MARKET_PLACE. 
 
 const web3 = new Web3(window.ethereum);
 
