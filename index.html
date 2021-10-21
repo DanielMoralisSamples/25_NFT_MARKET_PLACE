@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Head Content-->
+        <title>Flea Market</title>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Links -->
+        <!-- Make It Pretty Import the Bootstrap stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    </head>
+    <body>
+        <main>
+            <div class="container mt-5">
+                <div class="row">
+                    <h1 id="balance" ></h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-center bg-dark text-white">
+                            <h1>On Sale</h1>
+                        </div>
+                        <div id="offeringList" class="text-center">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center bg-dark text-white">
+                            <h1>Buy/Sell</h1>
+                        </div>
+                        <div id="featured_nft"class="text-center">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row"> 
+                    <div class="text-center bg-dark text-white">
+                        <h1>Your NFTs</h1>
+                    </div>
+                    <div id="NFTLists" class="container">         
+                    </div>
+                </div>   
+            </div>
+        </main>
+    <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+        <script src="static/logic.js"></script>
+    </body>
+</html>
