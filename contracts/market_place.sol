@@ -62,7 +62,7 @@ contract MarketPlace{
     function changeOperator(address _newOperator) external {
         require(msg.sender == operator,"only the operator can change the current operator");
         address previousOperator = operator;
-        operator = msg.sender;
+        operator = _newOperator;
         emit OperatorChanged(previousOperator, operator);
     }
 
