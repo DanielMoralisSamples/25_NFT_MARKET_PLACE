@@ -1,3 +1,10 @@
+/* This contracts are offered for learning purposes only, to illustrate certain aspects of development regarding web3, 
+   they are not audited of course and not for use in any production environment. 
+   They are not aiming to illustrate true randomness or reentrancy control, as a general rule they use transfer() instead of call() to avoid reentrancy,
+   which of course only works is the recipient is not intended to be a contract that executes complex logic on transfer.
+*/
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.9;
 
@@ -45,17 +52,17 @@ contract MarketPlace{
         require(msg.value >= offeringRegistry[_offeringId].price, "Not enough funds to buy");
         require(offeringRegistry[_offeringId].closed != true, "Offering is closed");
         ERC721 hostContract = ERC721(offeringRegistry[_offeringId].hostContract);
-        hostContract.safeTransferFrom(offeringRegistry[_offeringId].offerer, msg.sender, offeringRegistry[_offeringId].tokenId);
         offeringRegistry[_offeringId].closed = true;
         balances[offeringRegistry[_offeringId].offerer] += msg.value;
+        hostContract.safeTransferFrom(offeringRegistry[_offeringId].offerer, msg.sender, offeringRegistry[_offeringId].tokenId);
         emit OfferingClosed(_offeringId, msg.sender);
     } 
 
     function withdrawBalance() external {
         require(balances[msg.sender] > 0,"You don't have any balance to withdraw");
         uint amount = balances[msg.sender];
-        payable(msg.sender).transfer(amount);
         balances[msg.sender] = 0;
+        payable(msg.sender).transfer(amount);
         emit BalanceWithdrawn(msg.sender, amount);
     }
 
