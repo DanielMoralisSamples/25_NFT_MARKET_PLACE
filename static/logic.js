@@ -1,5 +1,5 @@
-Moralis.initialize(""); // Application id from moralis.io
-Moralis.serverURL = ""; //Server url from moralis.io
+Moralis.initialize(""); // ans1OlQizZDG3pTx8ZGlzMfNQwz1Y0mTmVPHp6gv
+Moralis.serverURL = ""; //https://tid0imztc8ut.usemoralis.com:2053/server
 
 const nft_market_place_address = "" //NFT Market Place Contract, code of this contract is in the following github repository https://github.com/DanielMoralisSamples/25_NFT_MARKET_PLACE. 
 
